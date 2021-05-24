@@ -4,18 +4,19 @@ using namespace std;
 class Solution {
 public:
     bool isPalindrome(int x) {
-        int pop;
+        if(x < 0) return 0;
         int rev = 0;
         int temp = x;
-        while(x!=0) {
-            pop = x % 10;
-            rev *= 10 + pop;
-
+        while(x > 0) {
+            int pop = x % 10;
+            if(rev > (pow(2,31)-1)/10 || rev < pow(-2,31)/10) {
+                return 0;
+            } 
+            rev = rev * 10 + pop;
             x /= 10;
         }
-        cout << rev;
-        if(temp == rev) return true;
-        else return false;
+        if(temp == rev) return 1;
+        else return 0;
     }
 };
 
