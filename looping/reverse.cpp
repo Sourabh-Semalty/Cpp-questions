@@ -4,21 +4,21 @@
 using namespace std;
 class Solution {
 public:
-    int reverse(int x) {
+    bool isPalindrome(int x) {
+        if(x < 0) return 0;
         int rev = 0;
-        int pop;
-        while(x!=0) {
-             pop = x % 10;
-            if(rev > (pow(2,31)-1)/10) {
+        int temp = x;
+        while(x > 0) {
+            int pop = x % 10;
+            if(rev > (pow(2,31)-1)/10 || rev < pow(-2,31)/10) {
                 return 0;
             } 
-            if(rev < pow(-2,31)/10) {
-                return 0;
-            }
-          rev = rev * 10 + pop;
-          x = x/10;
+            
+            rev = rev * 10 + pop;
+            x /= 10;
         }
-        return rev;
+        if(temp == rev) return 1;
+        else return 0;
     }
 };
 
