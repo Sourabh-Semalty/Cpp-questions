@@ -1,4 +1,2 @@
-  cout <<"Your are : \t";
-  cout << totalYear << " years"; 
-  cout << totalMonth << " month";
-  cout << totalDays << " day old";
+cout << "temp1 : " << temp1;
+    cout << "temp2 :" << temp2; 
