@@ -1,4 +1,1 @@
- // s.romanToInt("IV");
-  // s.romanToInt("IX");
-  // s.romanToInt("LVIII");
-  // s.romanToInt("MCMXCIV");
+swap_pos_data(&arr[min_pos],&arr[i]);
